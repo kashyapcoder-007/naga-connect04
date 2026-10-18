@@ -1,0 +1,310 @@
+{
+  "accounts": [
+    {
+      "id": "USR-1001",
+      "fullName": "Explorer NagaConnect",
+      "email": "explorer@nagaconnect.co",
+      "mobile": "+91 87947 95051",
+      "role": "Tourist Explorer",
+      "avatar": "🦅",
+      "ilpVerified": true,
+      "ilpPermit": {
+        "permitNumber": "NL-ILP-2026-88412",
+        "issuedTo": "Explorer NagaConnect",
+        "issueDate": "2026-10-01",
+        "expiryDate": "2026-11-01",
+        "purpose": "Tourism & Hornbill Festival",
+        "permittedDistricts": [
+          "Kohima",
+          "Dimapur",
+          "Mokokchung",
+          "Wokha",
+          "Mon",
+          "Zunheboto",
+          "Phek",
+          "Tuensang"
+        ],
+        "status": "VERIFIED",
+        "qrCodeData": "NAGALAND-ILP|NL-ILP-2026-88412|Explorer NagaConnect|VALID-UNTIL-2026-11-01"
+      },
+      "otp": {
+        "code": "884120",
+        "expiresAt": 1792400000000,
+        "verified": true
+      },
+      "bookings": [
+        {
+          "bookingId": "NC-TX-8841",
+          "type": "LOCAL FOUR WHEELER TAXI",
+          "pickup": "Nagaland University, Kohima Campus (Meriema - 797004)",
+          "dropoff": "Dzukou Valley Base (Viswema)",
+          "dateSlot": "Date: Oct 26 (Wed) • 08:00 AM",
+          "packageDays": "1",
+          "fare": "₹1,375",
+          "status": "CONFIRMED",
+          "createdAt": "2026-10-18T10:30:00Z"
+        },
+        {
+          "bookingId": "NC-BUS-9021",
+          "type": "LOCAL STATE BUS (NST)",
+          "pickup": "Kohima ISBT",
+          "dropoff": "Mokokchung Town Center",
+          "dateSlot": "Date: Oct 27 (Thu) • 07:00 AM",
+          "packageDays": "1",
+          "fare": "₹420",
+          "seats": [
+            "A2",
+            "A3"
+          ],
+          "status": "CONFIRMED",
+          "createdAt": "2026-10-18T11:15:00Z"
+        }
+      ],
+      "createdAt": "2026-10-15T09:00:00Z"
+    },
+    {
+      "id": "USR-1002",
+      "fullName": "Aarav Sharma",
+      "email": "aarav.sharma@gmail.com",
+      "mobile": "+91 98101 23456",
+      "role": "Solo Backpacker",
+      "avatar": "🎒",
+      "ilpVerified": true,
+      "ilpPermit": {
+        "permitNumber": "NL-ILP-2026-55102",
+        "issuedTo": "Aarav Sharma",
+        "issueDate": "2026-10-10",
+        "expiryDate": "2026-11-10",
+        "purpose": "Trekking & Cultural Exploration",
+        "permittedDistricts": [
+          "Kohima",
+          "Dimapur",
+          "Mokokchung"
+        ],
+        "status": "VERIFIED",
+        "qrCodeData": "NAGALAND-ILP|NL-ILP-2026-55102|Aarav Sharma|VALID-UNTIL-2026-11-10"
+      },
+      "otp": {
+        "code": "551020",
+        "expiresAt": 1792400000000,
+        "verified": true
+      },
+      "bookings": [
+        {
+          "bookingId": "NC-TX-5510",
+          "type": "LOCAL TWO WHEELER TAXI",
+          "pickup": "Kohima Main Town (Razhu Point)",
+          "dropoff": "Khonoma Green Village",
+          "dateSlot": "Date: Oct 26 (Wed) • 10:30 AM",
+          "packageDays": "1",
+          "fare": "₹360",
+          "status": "CONFIRMED",
+          "createdAt": "2026-10-17T14:20:00Z"
+        }
+      ],
+      "createdAt": "2026-10-16T12:00:00Z"
+    },
+    {
+      "id": "USR-1003",
+      "fullName": "Toshi Jamir (Local Host)",
+      "email": "toshi.jamir@ungma.org",
+      "mobile": "+91 94360 78921",
+      "role": "Indigenous Resident / Artisan",
+      "avatar": "🪶",
+      "ilpVerified": true,
+      "ilpPermit": {
+        "permitNumber": "NL-IND-RES-00912",
+        "issuedTo": "Toshi Jamir",
+        "issueDate": "2020-01-01",
+        "expiryDate": "PERMANENT",
+        "purpose": "Indigenous Naga Resident",
+        "permittedDistricts": [
+          "ALL 16 DISTRICTS"
+        ],
+        "status": "PERMANENT RESIDENT",
+        "qrCodeData": "NAGALAND-RESIDENT|NL-IND-RES-00912|Toshi Jamir|PERMANENT"
+      },
+      "otp": {
+        "code": "789210",
+        "expiresAt": 1792400000000,
+        "verified": true
+      },
+      "bookings": [],
+      "createdAt": "2026-10-10T08:00:00Z"
+    },
+    {
+      "id": "USR-1004",
+      "fullName": "Test Naga Explorer",
+      "email": "test.traveler@nagaconnect.co",
+      "mobile": "+91 87947 11111",
+      "role": "Verified Explorer",
+      "avatar": "🪪",
+      "ilpVerified": true,
+      "ilpPermit": {
+        "permitNumber": "NL-ILP-2026-99999",
+        "issuedTo": "Test Naga Explorer",
+        "issueDate": "2026-10-18",
+        "expiryDate": "2026-11-30",
+        "purpose": "Official Tourism & Cultural Exploration",
+        "permittedDistricts": [
+          "Kohima",
+          "Dimapur",
+          "Mokokchung",
+          "Wokha",
+          "Mon",
+          "Zunheboto",
+          "Phek",
+          "Tuensang"
+        ],
+        "status": "OFFICIALLY VERIFIED",
+        "checkgateBarcode": "NL-BEFR-1873-644903",
+        "qrCodeData": "https://ilp.nagaland.gov.in/verify?p=NL-ILP-2026-99999&holder=Test%20Naga%20Explorer",
+        "issuingAuthority": "Office of the Deputy Commissioner, Kohima, Nagaland",
+        "securitySeal": "GOVERNMENT OF NAGALAND • INNER LINE PERMIT VERIFIED"
+      },
+      "otp": {
+        "code": "VERIFIED",
+        "verified": true
+      },
+      "bookings": [
+        {
+          "bookingId": "NC-BUS-1425",
+          "type": "LOCAL FOUR WHEELER TAXI",
+          "pickup": "Kohima Main Town",
+          "dropoff": "Dzukou Valley Base",
+          "dateSlot": "Date: Oct 26 • 08:00 AM",
+          "packageDays": "1",
+          "seats": [],
+          "fare": "₹1,450",
+          "status": "CONFIRMED",
+          "riderPickup": "Confirmed Doorstep / Hub Rider Pickup",
+          "bookedBy": "Test Naga Explorer",
+          "accountId": "USR-1004",
+          "createdAt": "2026-10-18T20:21:39Z"
+        }
+      ],
+      "createdAt": "2026-10-18T20:21:37Z"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "blog-1",
+      "title": "Kohima & Khonoma: Handwoven Loramhoushu Shawls, Cane Kophi Baskets & Stone Craft",
+      "place": "Kohima & Khonoma",
+      "tribe": "Angami Tribe",
+      "category": "Beadwork",
+      "productsHighlighted": "Loramhoushu Shawl, Kophi Cane & Bamboo Baskets, Carved Stone Monoliths",
+      "author": "Kevino Meyase • Khonoma Artisan Guild",
+      "authorId": "USR-1001",
+      "date": "Oct 26, 2026",
+      "dropoffTarget": "Khonoma Green Village",
+      "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=900&q=80",
+      "story": "In the stone-paved alleys of Khonoma and Kohima, Angami elders weave intricate 'Kophi' carrying baskets from seasoned mountain cane and split bamboo during the post-harvest months. Alongside basketry, Angami women use traditional backstrap loin looms to weave the iconic 'Loramhoushu' and 'Lohe' shawls featuring striking red, yellow, and green bands over crisp white or black cotton.",
+      "likes": 48,
+      "comments": [
+        {
+          "user": "Aarav Sharma",
+          "userId": "USR-1002",
+          "text": "Bought an authentic Kophi basket directly from Semoma Khel in Khonoma last week—incredible craftsmanship!"
+        }
+      ]
+    },
+    {
+      "id": "blog-2",
+      "title": "Mokokchung Heritage: Ao Naga Tsungkotepsu Warrior Shawls & Organic Rock Honey",
+      "place": "Mokokchung",
+      "tribe": "Ao Tribe",
+      "category": "Handlooms",
+      "productsHighlighted": "Tsungkotepsu Shawl, Bamboo Drinking Mugs, Organic Cliff Honey",
+      "author": "Toshi Jamir • Ungma Cultural Weaver",
+      "authorId": "USR-1003",
+      "date": "Oct 25, 2026",
+      "dropoffTarget": "Mokokchung (Ungma Village)",
+      "image": "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=900&q=80",
+      "story": "Mokokchung—the cultural heartland of the Ao Naga tribe—is renowned for the 'Tsungkotepsu' shawl. Across its central white median strip, artisans hand-paint symbolic motifs of the mithun, hornbill, tiger, spear, and rooster using natural black tree-sap dye. Visitors to Ungma and Longkhum villages can also pick up smoked bamboo mugs and pure wild rock-bee honey harvested from cliffside forests.",
+      "likes": 62,
+      "comments": [
+        {
+          "user": "Explorer NagaConnect",
+          "userId": "USR-1001",
+          "text": "Ungma village weavers gladly explain every symbol on the Tsungkotepsu median strip!"
+        }
+      ]
+    },
+    {
+      "id": "blog-3",
+      "title": "Mon & Longwa: Konyak Brass Smithery, Multi-Strand Glass Beadwork & Dao Craft",
+      "place": "Mon & Longwa",
+      "tribe": "Konyak Tribe",
+      "category": "Woodcraft",
+      "productsHighlighted": "Konyak Brass Figurines, Multi-Strand Glass Bead Necklaces, Hand-Forged Naga Dao",
+      "author": "Wangpha Konyak • Longwa Heritage Collective",
+      "authorId": "USR-1001",
+      "date": "Oct 24, 2026",
+      "dropoffTarget": "Longwa Village, Mon",
+      "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80",
+      "story": "High on the Indo-Myanmar ridge at Longwa and Chui villages in Mon District, Konyak blacksmiths and bead-makers preserve centuries-old metallurgy and ornament crafting. Using lost-wax casting, artisans forge brass pendants and ceremonial bells, while women string vibrant red, yellow, and green glass beads into chest ornaments. Master smiths also temper traditional Naga 'Dao' machetes with dyed goat-hair hilts.",
+      "likes": 75,
+      "comments": []
+    },
+    {
+      "id": "blog-4",
+      "title": "Phek District: GI-Tagged Chakhesang Shawls & Himalayan Nettle-Fiber (Thüvü) Weaves",
+      "place": "Phek District",
+      "tribe": "Chakhesang Tribe",
+      "category": "Handlooms",
+      "productsHighlighted": "GI-Tagged Chakhesang Shawls, Thüvü (Stinging Nettle) Eco-Textiles",
+      "author": "Neingupeu Ritse • Chizami Women Weavers",
+      "authorId": "USR-1001",
+      "date": "Oct 23, 2026",
+      "dropoffTarget": "Phek Town & Chakhesang Loom Center",
+      "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80",
+      "story": "Awarded the prestigious Geographical Indication (GI) tag, Chakhesang shawls from Phek District feature bold spearhead and diamond geometric motifs symbolizing courage and harmony with nature. In villages like Chizami and Pfutsero, weavers also harvest wild Himalayan stinging nettle ('Thüvü'), boiling and spinning the bark fibers by hand into breathable, organic shawls, jackets, and tote bags.",
+      "likes": 54,
+      "comments": []
+    },
+    {
+      "id": "blog-5",
+      "title": "Wokha & Zunheboto: Lotha Opvuram, Sumi Avakhu Textiles & Artisanal Axone Cakes",
+      "place": "Wokha & Doyang",
+      "tribe": "Lotha Tribe",
+      "category": "Organic Produce",
+      "productsHighlighted": "Lotha Opvuram & Sumi Avakhu Shawls, Pineapple Preserves, Fermented Axone Cakes",
+      "author": "Yingbemo Patton & Kivi Zhimomi",
+      "authorId": "USR-1001",
+      "date": "Oct 22, 2026",
+      "dropoffTarget": "Doyang Hydro Valley, Wokha",
+      "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80",
+      "story": "Travelling through Wokha (Lotha tribe) and neighbouring Zunheboto (Sumi tribe) rewards visitors with both prestigious handlooms—such as the Lotha 'Opvuram' and Sumi 'Avakhu' textiles—and Nagaland's finest highland pantry staples. Roadside co-ops around Doyang and Baghty valley offer sun-ripened pineapple and passionfruit preserves, while Zunheboto homesteads wrap smoky, umami-rich fermented soybean ('Axone') cakes in banana leaves.",
+      "likes": 41,
+      "comments": []
+    }
+  ],
+  "adMetrics": {
+    "impressions": 1840,
+    "clicks": 112
+  },
+  "sponsoredAds": [
+    {
+      "id": "AD_HORNBILL",
+      "company": "Nagaland Tourism • Hornbill 2026",
+      "headline": "Book Official Kisama VIP Morung Passes & Helicopter Transfers",
+      "cta": "Reserve VIP Pass →",
+      "url": "https://tourism.nagaland.gov.in"
+    },
+    {
+      "id": "AD_HANDLOOM",
+      "company": "Nagaland Handloom & Handicrafts Corp (NHHDC)",
+      "headline": "Certified GI-Tagged Naga Shawls & Kophi Baskets Direct from Weavers",
+      "cta": "Explore Emporium →",
+      "url": "https://nagaland.gov.in"
+    },
+    {
+      "id": "AD_IRCTC",
+      "company": "IRCTC Official North-East Rail & Air Partner",
+      "headline": "Direct Rajdhani & Alliance Air Connections to Dimapur (DMV/DMU)",
+      "cta": "Book on IRCTC →",
+      "url": "https://www.irctc.co.in"
+    }
+  ]
+}

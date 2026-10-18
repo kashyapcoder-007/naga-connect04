@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NagaConnect — Rent with Confidence | Nagaland Smart Mobility, Tribal Portal & Multi-Account Hub</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            nagaRed: '#C8102E',
+            nagaRedLight: '#E63946',
+            nagaCrimson: '#8E0F22',
+            nagaGold: '#E8A317',
+            nagaGoldSoft: '#FFD166',
+            nagaDark: '#130F0D',
+            nagaCard: '#1F1815',
+            nagaCream: '#F1E6D0',
+            nagaMoss: '#3E5B3A',
+            nagaGreen: '#16A34A',
+            nagaIndigo: '#1F2A44',
+            slate: {
+              50: '#FAF4E6', 100: '#F1E6D0', 200: '#E3D4B4', 300: '#CDB892',
+              400: '#B09C80', 500: '#75634F', 600: '#5E4E3F', 700: '#43362D',
+              800: '#2C231E', 900: '#1D1714', 950: '#130F0D'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            display: ['"Rozha One"', 'Space Grotesk', 'Inter', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts: Rozha One + Inter + Plus Jakarta Sans + Space Grotesk -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Rozha+One&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Leaflet CSS & JS for Interactive Nagaland Maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- QRCode.js for Digital e-ILP Passes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <!-- React 18 & Babel Standalone -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    :root {
+      --band-fine: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='6' viewBox='0 0 24 6'%3E%3Crect width='24' height='6' fill='%23C8102E'/%3E%3Cpath d='M0 3 6 0 12 3 6 6Z' fill='%23130F0D'/%3E%3Cpath d='M12 3 18 0 24 3 18 6Z' fill='%23F1E6D0'/%3E%3Ccircle cx='6' cy='3' r='1' fill='%23E8A317'/%3E%3Ccircle cx='18' cy='3' r='1' fill='%23C8102E'/%3E%3C/svg%3E");
+      --band-wide: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='12' viewBox='0 0 32 12'%3E%3Crect width='32' height='12' fill='%23130F0D'/%3E%3Crect width='32' height='2.5' fill='%23C8102E'/%3E%3Crect y='9.5' width='32' height='2.5' fill='%23C8102E'/%3E%3Cpath d='M0 6 4 3 8 6 4 9Z' fill='%23E8A317'/%3E%3Cpath d='M8 6 12 3 16 6 12 9Z' fill='%23F1E6D0'/%3E%3Cpath d='M16 6 20 3 24 6 20 9Z' fill='%23E8A317'/%3E%3Cpath d='M24 6 28 3 32 6 28 9Z' fill='%23F1E6D0'/%3E%3C/svg%3E");
+      --weave-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M14 4 24 14 14 24 4 14Z' fill='none' stroke='%23E8A317' stroke-opacity='.07' stroke-width='1'/%3E%3Ccircle cx='14' cy='14' r='1.2' fill='%23C8102E' fill-opacity='.18'/%3E%3C/svg%3E");
+      --weave-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M14 4 24 14 14 24 4 14Z' fill='none' stroke='%238E0F22' stroke-opacity='.08' stroke-width='1'/%3E%3Ccircle cx='14' cy='14' r='1.2' fill='%23C8102E' fill-opacity='.14'/%3E%3C/svg%3E");
+    }
+
+    body { background-image: var(--weave-light); }
+    html.dark body { background-image: var(--weave-dark); }
+
+    .font-display { font-weight: 400 !important; letter-spacing: 0.01em; }
+
+    .naga-shawl-border {
+      background-image: var(--band-wide);
+      background-repeat: repeat-x;
+      background-size: 32px 12px;
+      height: 12px;
+      width: 100%;
+    }
+
+    .glass-panel {
+      background-color: rgba(31, 24, 21, 0.90);
+      background-image: var(--band-fine);
+      background-repeat: repeat-x;
+      background-position: top left;
+      background-size: 24px 6px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(232, 163, 23, 0.20);
+    }
+    html:not(.dark) .glass-panel {
+      background-color: rgba(255, 250, 238, 0.96);
+      border: 1px solid rgba(142, 15, 34, 0.20);
+      box-shadow: 0 12px 30px -14px rgba(60, 30, 10, 0.25);
+    }
+
+    .band-wide { background-image: var(--band-wide); background-repeat: repeat-x; background-size: 32px 12px; height: 12px; }
+    .band-fine { background-image: var(--band-fine); background-repeat: repeat-x; background-size: 24px 6px; height: 6px; }
+    .diamond-rule {
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cpath d='M14 1 21 7 14 13 7 7Z' fill='%23E8A317'/%3E%3Cpath d='M0 7H5M23 7H28' stroke='%23C8102E' stroke-width='2'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-position: center;
+      opacity: .85;
+    }
+
+    .shawl-frame { position: relative; background: #130F0D; }
+    .shawl-frame::before, .shawl-frame::after {
+      content: ""; position: absolute; left: 0; right: 0; height: 8px; z-index: 2;
+      background-image: var(--band-fine); background-repeat: repeat-x; background-size: 24px 6px;
+    }
+    .shawl-frame::before { top: 0; }
+    .shawl-frame::after { bottom: 0; }
+
+    .hero-bg {
+      background:
+        radial-gradient(1200px 400px at 85% -10%, rgba(232,163,23,.18), transparent 60%),
+        radial-gradient(900px 500px at -10% 110%, rgba(200,16,46,.25), transparent 60%),
+        #130F0D;
+    }
+
+    .tribe-card { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+    .tribe-card:hover { transform: translateY(-4px); border-color: #E8A317; box-shadow: 0 18px 30px -16px rgba(232,163,23,.45); }
+
+    .view-tile img { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+    .view-tile:hover img { transform: scale(1.06); }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 15px rgba(200, 16, 46, 0.4); }
+      50% { box-shadow: 0 0 28px rgba(232, 163, 23, 0.7); }
+    }
+    .animate-glow { animation: pulseGlow 3s infinite; }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .animate-float { animation: floatSlow 4s ease-in-out infinite; }
+
+    :focus-visible { outline: 2px solid #E8A317; outline-offset: 2px; }
+
+    .leaflet-container {
+      font-family: 'Inter', sans-serif;
+      border-radius: 0.75rem;
+      z-index: 10;
+    }
+
+    .otp-input {
+      width: 44px;
+      height: 52px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 800;
+      border-radius: 12px;
+      border: 2px solid #CDB892;
+      background: rgba(31, 24, 21, 0.6);
+      color: #E8A317;
+      transition: all 0.2s;
+    }
+    html:not(.dark) .otp-input {
+      background: #FFFFFF;
+      border-color: #75634F;
+      color: #C8102E;
+    }
+    .otp-input:focus {
+      border-color: #C8102E;
+      outline: none;
+      box-shadow: 0 0 10px rgba(200, 16, 46, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-nagaDark text-slate-900 dark:text-slate-100 min-h-screen selection:bg-nagaRed selection:text-white transition-colors duration-300">
+  <div class="naga-shawl-border sticky top-0 z-50"></div>
+  <div id="root"></div>
+
+  <script src="index.html" type="text/plain" id="fallbackNotice"></script>
+  <!-- Load the main React UI script directly -->
+  <script type="text/babel">
+    // Load unified React app from index.html
+    const scriptSrc = document.createElement('script');
+    scriptSrc.type = 'text/babel';
+    fetch('index.html').then(r => r.text()).then(html => {
+      const match = html.match(/<script type="text\/babel">([\s\S]*?)<\/script>/);
+      if (match && match[1]) {
+        eval(Babel.transform(match[1], { presets: ['react'] }).code);
+      }
+    });
+  </script>
+</body>
+</html>
